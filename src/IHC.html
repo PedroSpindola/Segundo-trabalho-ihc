@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento Médico</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Tela Inicial -->
+  <div id="home" class="p-6">
+    <header class="flex justify-between items-center mb-8">
+      <h1 class="text-2xl font-bold text-blue-600">MedAgenda</h1>
+      <nav>
+        <a href="#" class="text-gray-700 hover:text-blue-600">Login</a>
+      </nav>
+    </header>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+      <h2 class="text-3xl font-bold mb-4">Agende sua consulta de forma rápida e fácil</h2>
+      <button onclick="nextScreen('specialty')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+        Agendar Consulta
+      </button>
+    </div>
+  </div>
+
+  <!-- Seleção de Especialidade -->
+  <div id="specialty" class="p-6 hidden">
+    <h2 class="text-2xl font-bold mb-6">Escolha uma especialidade</h2>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-white p-4 rounded-lg shadow-md text-center">
+        <img src="cardio-icon.png" alt="Cardiologia" class="w-12 h-12 mx-auto mb-2">
+        <p class="font-semibold">Cardiologia</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md text-center">
+        <img src="derma-icon.png" alt="Dermatologia" class="w-12 h-12 mx-auto mb-2">
+        <p class="font-semibold">Dermatologia</p>
+      </div>
+    </div>
+    <button onclick="nextScreen('doctor')" class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+      Próximo
+    </button>
+  </div>
+
+  <!-- Seleção de Médico -->
+  <div id="doctor" class="p-6 hidden">
+    <h2 class="text-2xl font-bold mb-6">Escolha um médico</h2>
+    <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+      <img src="doctor1.jpg" alt="Dr. João Silva" class="w-16 h-16 rounded-full mx-auto mb-2">
+      <p class="font-semibold text-center">Dr. João Silva</p>
+      <p class="text-sm text-gray-600 text-center">Cardiologista</p>
+    </div>
+    <button onclick="nextScreen('schedule')" class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+      Próximo
+    </button>
+  </div>
+
+  <!-- Seleção de Horário -->
+  <div id="schedule" class="p-6 hidden">
+    <h2 class="text-2xl font-bold mb-6">Escolha um horário</h2>
+    <div class="bg-white p-4 rounded-lg shadow-md">
+      <p class="text-center">10:00 - Disponível</p>
+    </div>
+    <button onclick="nextScreen('confirmation')" class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+      Confirmar
+    </button>
+  </div>
+
+  <!-- Confirmação de Agendamento -->
+  <div id="confirmation" class="p-6 hidden">
+    <h2 class="text-2xl font-bold mb-6">Confirme seu agendamento</h2>
+    <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+      <p class="font-semibold">Consulta com Dr. João Silva</p>
+      <p class="text-sm text-gray-600">25/10/2023 às 10:00</p>
+    </div>
+    <button onclick="alert('Agendamento confirmado!')" class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+      Finalizar Agendamento
+    </button>
+  </div>
+
+  <script>
+    function nextScreen(screenId) {
+      document.querySelectorAll('div[id]').forEach(div => div.classList.add('hidden'));
+      document.getElementById(screenId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
