@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pacientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Fundo totalmente branco */
+            color: #000000; /* Texto preto */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #ffffff; /* Fundo branco */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .header a {
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f8f8; /* Tom claro para cabeçalho */
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">MedAgenda</a>
+    </div>
+    <div class="container">
+        <h2>Lista de Pacientes</h2>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Número de Telefone</th>
+                <th>Condição</th>
+                <th>Data da Consulta</th>
+            </tr>
+            <tr>
+                <td>João Silva</td>
+                <td>123.456.789-00</td>
+                <td>(11) 98765-4321</td>
+                <td>Hipertensão</td>
+                <td>12/03/2025</td>
+            </tr>
+            <tr>
+                <td>Maria Oliveira</td>
+                <td>987.654.321-00</td>
+                <td>(21) 91234-5678</td>
+                <td>Diabetes</td>
+                <td>15/03/2025</td>
+            </tr>
+            <tr>
+                <td>Carlos Souza</td>
+                <td>321.654.987-00</td>
+                <td>(31) 99876-5432</td>
+                <td>Colesterol Alto</td>
+                <td>20/03/2025</td>
+            </tr>
+            <tr>
+                <td>Ana Pereira</td>
+                <td>654.321.987-00</td>
+                <td>(41) 97654-3210</td>
+                <td>Asma</td>
+                <td>25/03/2025</td>
+            </tr>
+            <tr>
+                <td>Fernando Lima</td>
+                <td>852.741.963-00</td>
+                <td>(51) 96587-4123</td>
+                <td>Arritmia</td>
+                <td>28/03/2025</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
